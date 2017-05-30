@@ -4,15 +4,18 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath('io.github.robwin:jgitflow-gradle-plugin:0.3.2')
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.github.robwin.jgitflow'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
